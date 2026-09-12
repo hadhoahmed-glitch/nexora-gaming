@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexora-Gaming</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="logo">NEXORA<span>-GAMING</span></div>
+  <button class="menu" onclick="toggleMenu()">☰</button>
+  <nav id="navLinks">
+    <a href="#home">الرئيسية</a><a href="#games">الألعاب</a><a href="#news">الأخبار</a>
+    <a href="#tournaments">البطولات</a><a href="#community">المجتمع</a>
+  </nav>
+  <button class="login" onclick="openLogin()">تسجيل الدخول</button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">WELCOME TO THE NEXT LEVEL</p>
+    <h1>عالم الألعاب<br><span>بين إيديك</span></h1>
+    <p>اكتشف ألعاب جديدة، تابع الأخبار، شارك في البطولات، وابنِ مجتمعك مع Nexora-Gaming.</p>
+    <div><a class="primary" href="#games">استكشف الألعاب</a><a class="secondary" href="#tournaments">البطولات</a></div>
+  </div>
+</section>
+
+<section id="games" class="section">
+  <div class="section-head"><div><p class="eyebrow">GAME LIBRARY</p><h2>أشهر الألعاب</h2></div>
+  <input id="search" placeholder="🔎 ابحث عن لعبة..." oninput="filterGames()"></div>
+  <div class="chips"><button class="active" onclick="filterCat('all',this)">الكل</button><button onclick="filterCat('action',this)">أكشن</button><button onclick="filterCat('sports',this)">رياضة</button><button onclick="filterCat('rpg',this)">RPG</button></div>
+  <div id="gameGrid" class="grid"></div>
+</section>
+
+<section id="news" class="section alt">
+  <p class="eyebrow">LATEST NEWS</p><h2>آخر أخبار الألعاب</h2>
+  <div class="news-grid">
+    <article><div class="thumb">🎮</div><div><small>12 سبتمبر 2026</small><h3>أهم تحديثات الألعاب هذا الأسبوع</h3><p>تابع أحدث الإضافات والمميزات والإصلاحات.</p></div></article>
+    <article><div class="thumb">🏆</div><div><small>10 سبتمبر 2026</small><h3>بطولات جديدة قادمة</h3><p>استعد للمنافسة وحقق مركزك في لوحة المتصدرين.</p></div></article>
+    <article><div class="thumb">🚀</div><div><small>8 سبتمبر 2026</small><h3>إصدارات تستحق التجربة</h3><p>مجموعة ألعاب جديدة لعشاق كل الأنواع.</p></div></article>
+  </div>
+</section>
+
+<section id="tournaments" class="section">
+  <p class="eyebrow">COMPETE</p><h2>البطولات</h2>
+  <div class="tournament"><div><b>🔥 Nexora Championship</b><p>بطولة مجتمعية — التسجيل مفتوح</p></div><button onclick="joinTournament()">شارك الآن</button></div>
+  <div class="tournament"><div><b>⚡ Weekly Challenge</b><p>تحدي أسبوعي لأعلى نقاط</p></div><button onclick="joinTournament()">شارك الآن</button></div>
+</section>
+
+<section id="community" class="section alt community">
+  <p class="eyebrow">COMMUNITY</p><h2>مجتمع اللاعبين</h2>
+  <p>شارك إنجازاتك، ناقش ألعابك المفضلة، وتعرف على لاعبين جدد.</p>
+  <button class="primary" onclick="openLogin()">انضم للمجتمع</button>
+</section>
+</main>
+
+<footer><b>NEXORA-GAMING</b><span>منصة ألعاب من الجيل الجديد © 2026</span></footer>
+
+<div id="modal" class="modal">
+ <div class="modal-box"><button class="close" onclick="closeLogin()">×</button><h2>تسجيل الدخول</h2><input placeholder="اسم المستخدم"><input type="email" placeholder="البريد الإلكتروني"><button class="primary full" onclick="fakeLogin()">دخول</button><p id="msg"></p></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
